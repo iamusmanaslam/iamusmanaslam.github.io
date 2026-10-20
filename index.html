@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usman Aslam</title>
+<meta name="description" content="Usman Aslam – IT Infrastructure Engineer and Microsoft 365 & Azure Specialist with 12+ years of experience. Based in Ilford, Essex, UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f8fb; --surface:#ffffff; --text:#16202c; --muted:#5d6b7b;
+    --accent:#1f4e79; --accent-soft:#e6eef6; --line:#dbe3ec;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d141c; --surface:#141e29; --text:#e6edf4; --muted:#93a3b5;
+      --accent:#6ea8dc; --accent-soft:#1a2a3b; --line:#253446;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font:15px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--text);letter-spacing:-.02em}
+  .logo span{color:var(--accent)}
+  .links{display:flex;gap:20px;font-size:14px}
+  .links a{color:var(--muted)}
+  .links a:hover{color:var(--accent);text-decoration:none}
+
+  /* Hero */
+  .hero{padding:64px 0 44px;display:flex;gap:28px;align-items:center}
+  .avatar{flex:none;width:112px;height:112px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:700 38px "Space Grotesk",sans-serif;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .hero h1{font:700 clamp(32px,6vw,46px)/1.1 "Space Grotesk",sans-serif;letter-spacing:-.03em}
+  .hero .role{margin-top:6px;font-size:17px;color:var(--muted)}
+  .hero .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--muted)}
+  .btns{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;padding:9px 18px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid var(--accent)}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn:hover{text-decoration:none;opacity:.9}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+  .stat b{display:block;font:700 26px "Space Grotesk",sans-serif;color:var(--accent)}
+  .stat small{color:var(--muted);font-size:13px}
+
+  /* Sections */
+  section{padding:40px 0 8px}
+  h2{font:700 13px "Space Grotesk",sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+  p.lead{color:var(--text);font-size:16px}
+
+  .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .hl{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:16px}
+  .hl h3{font-size:15px;margin-bottom:6px}
+  .hl p{font-size:13.5px;color:var(--muted)}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:26px}
+  .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .job{position:relative;margin-bottom:22px}
+  .job::before{content:"";position:absolute;left:-26px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+  .job.minor::before{background:var(--bg);border:2px solid var(--accent);width:10px;height:10px;left:-24px;top:7px}
+  .job-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .job h3{font-size:16px}
+  .job .co{color:var(--accent);font-weight:600;font-size:14px}
+  .job .co span{color:var(--muted);font-weight:400}
+  .date{font-size:13px;color:var(--muted);white-space:nowrap}
+  .job ul{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+  .job li{margin-bottom:4px}
+  details summary{cursor:pointer;margin-top:10px;font-size:13px;font-weight:600;color:var(--accent);list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:"+ "}
+  details[open] summary::before{content:"− "}
+
+  /* Skills */
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{background:var(--accent-soft);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:500}
+
+  /* Certs */
+  .certs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .cert{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start}
+  .badge{flex:none;width:34px;height:34px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:700 11px "Space Grotesk",sans-serif}
+  .cert b{display:block;font-size:14px;line-height:1.35}
+  .cert small{color:var(--muted);font-size:12.5px}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .two .card h3{font-size:15px;margin-bottom:4px}
+  .muted{color:var(--muted);font-size:14px}
+  .langs{list-style:none;font-size:14px}
+  .langs li{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed var(--line)}
+  .langs li:last-child{border:0}
+  .langs span{color:var(--muted);font-size:13px}
+
+  .interests{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .int{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+  .int h3{font-size:15px;margin-bottom:4px}
+  .int p{font-size:13.5px;color:var(--muted)}
+
+  footer{margin-top:48px;padding:36px 0;border-top:1px solid var(--line);text-align:center}
+  footer h2{justify-content:center}
+  footer h2::after{display:none}
+  footer p{color:var(--muted);font-size:14px;margin-top:14px}
+
+  @media (max-width:700px){
+    .links{display:none}
+    .hero{flex-direction:column;text-align:center;padding-top:40px}
+    .hero .meta,.btns{justify-content:center}
+    .highlights,.certs,.two,.interests{grid-template-columns:1fr}
+    .stat b{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Usman<span>.</span></a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+      <a href="Usman-Aslam-CV.pdf" download>CV ⬇</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <header class="hero">
+    <div class="avatar">UA<!-- To add a photo: replace "UA" with <img src="photo.jpg" alt="Usman Aslam"> --></div>
+    <div>
+      <h1>Usman Aslam</h1>
+      <p class="role">IT Infrastructure Engineer · Microsoft 365 &amp; Azure Specialist</p>
+      <div class="meta">
+        <span>📍 Ilford, Essex, UK</span>
+        <a href="mailto:aslam.usman8@gmail.com">✉ aslam.usman8@gmail.com</a>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="mailto:aslam.usman8@gmail.com">Get in touch</a>
+        <a class="btn" href="Usman-Aslam-CV.pdf" download>⬇ Download CV</a>
+        <a class="btn" href="https://uk.linkedin.com/in/usman-aslam-2789b26" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>12+</b><small>Years in IT infrastructure</small></div>
+    <div class="stat"><b>8</b><small>Industry certifications</small></div>
+    <div class="stat"><b>5</b><small>Languages spoken</small></div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p class="lead">Strategic IT Infrastructure Engineer with over 12 years of experience leading and optimising global IT infrastructure and enterprise technology environments. I deliver transformational projects — server migrations, security enhancements, cloud integrations and systems integration — that streamline operations, improve performance and reduce costs. I enjoy managing complex environments, working across teams and vendors, and building IT that is secure, reliable and scalable.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Highlights</h2>
+    <div class="highlights">
+      <div class="hl"><h3>Secure VPN access</h3><p>Set up NDES and deployed SCEP and Root CA certificates through Microsoft Intune, strengthening device security and reducing cyber risk.</p></div>
+      <div class="hl"><h3>Cloud cost optimisation</h3><p>Managed and optimised Azure resources, substantially cutting cloud spend while keeping services fast and available.</p></div>
+      <div class="hl"><h3>Domain consolidation</h3><p>Consolidated three domain controllers into one with ADMT, fully synchronised to Microsoft Entra ID via Azure AD Connect.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="job">
+        <div class="job-head"><h3>Infrastructure Engineer</h3><span class="date">2020 – Present</span></div>
+        <div class="co">Ikiru People Ltd. <span>· Hampshire, UK</span></div>
+        <ul>
+          <li>Global IT infrastructure management, Microsoft 365 administration and technical user support.</li>
+          <li>Led the migration of GPOs to Microsoft Intune and consolidated three domain controllers into a single domain using ADMT.</li>
+          <li>Developed and deployed Windows Autopilot, significantly reducing device deployment and rebuild times.</li>
+          <li>Moved update management to Intune and implemented Microsoft Autopatch.</li>
+        </ul>
+        <details>
+          <summary>More</summary>
+          <ul>
+            <li>Managed Active Directory: GPOs, OUs, domain controllers, DNS and DHCP.</li>
+            <li>Synchronised users and groups with Microsoft Entra ID using Azure AD Connect.</li>
+            <li>Installed and maintained VMware ESXi with Dell iSCSI SAN integration.</li>
+            <li>Replaced FTP-based client data transfers with secure Azure Storage accounts.</li>
+            <li>Monitored and controlled Azure infrastructure costs.</li>
+            <li>Deployed SCEP and Root CA certificates via Intune to support FortiClient VPN.</li>
+            <li>Wrote PowerShell scripts for AD users, groups, computers, mailbox permissions and Exchange Online calendars.</li>
+            <li>Ran security awareness training through KnowBe4.</li>
+            <li>Proactive monitoring with PRTG Network Monitor; service requests via ManageEngine ServiceDesk Plus.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="job">
+        <div class="job-head"><h3>Infrastructure Engineer</h3><span class="date">2012 – 2019</span></div>
+        <div class="co">Dillistone Systems Ltd. <span>· London, UK</span></div>
+        <ul>
+          <li>Migrated extensive document libraries from on-premises file servers to SharePoint Online across multiple departments.</li>
+          <li>Implemented VMware virtualisation, cutting maintenance costs and improving efficiency.</li>
+          <li>Deployed WSUS for Windows update management and Acronis Cyber Protect for backups.</li>
+        </ul>
+        <details>
+          <summary>More</summary>
+          <ul>
+            <li>Managed Cisco ASA firewall configuration backups, user access and port settings.</li>
+            <li>Backups with Symantec Backup Exec and regular patching of Windows servers in the NOC.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="job minor">
+        <div class="job-head"><h3>2nd Line Technical Support Engineer</h3><span class="date">2009 – 2012</span></div>
+        <div class="co">Dillistone Systems Ltd. <span>· Support Services</span></div>
+        <ul>
+          <li>Second-line support for escalated issues across global offices and clients.</li>
+          <li>Installed, upgraded and replicated Sybase SQL CRM databases across international offices.</li>
+          <li>Trained first-line engineers and liaised with development on bugs and features.</li>
+        </ul>
+      </div>
+
+      <div class="job minor">
+        <div class="job-head"><h3>Software Trainer / 1st Line Support Analyst</h3><span class="date">2007 – 2009</span></div>
+        <div class="co">Dillistone Systems Ltd.</div>
+        <ul>
+          <li>First-line technical support and software training for clients and users.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Core skills</h2>
+    <div class="tags">
+      <span class="tag">Microsoft 365</span><span class="tag">Intune / Endpoint Manager</span><span class="tag">Azure</span><span class="tag">Entra ID</span>
+      <span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">Group Policy</span><span class="tag">Windows Autopilot</span>
+      <span class="tag">PowerShell</span><span class="tag">VMware ESXi</span><span class="tag">Security Management</span><span class="tag">Network Administration</span>
+      <span class="tag">ESET Protect</span><span class="tag">PRTG</span><span class="tag">Systems Integration</span><span class="tag">Database Management</span>
+      <span class="tag">Project Management</span><span class="tag">Performance Optimisation</span><span class="tag">Troubleshooting</span><span class="tag">Training</span>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div class="cert"><div class="badge">ISC2</div><div><b>CC – Certified in Cybersecurity</b><small>ISC2 · 2025 – 2028</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>Microsoft 365 Administrator Expert (MS-102)</b><small>Microsoft · 2024 – 2028</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>Azure Administrator Associate (AZ-104)</b><small>Microsoft · 2023 – 2027</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>Identity &amp; Access Administrator (SC-300)</b><small>Microsoft · 2022 – 2027</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>Endpoint Administrator Associate (MD-100, MD-101)</b><small>Microsoft · 2022 – 2027</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>MCSA: Office 365</b><small>Microsoft</small></div></div>
+      <div class="cert"><div class="badge">MS</div><div><b>Azure Fundamentals (AZ-900)</b><small>Microsoft</small></div></div>
+      <div class="cert"><div class="badge">AWS</div><div><b>AWS Certified Cloud Practitioner</b><small>Amazon Web Services</small></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education &amp; languages</h2>
+    <div class="two">
+      <div class="card">
+        <h3>B.Sc. (Hons) Computing</h3>
+        <p class="muted">University of Westminster, London<br>2003 – 2007</p>
+      </div>
+      <div class="card">
+        <ul class="langs">
+          <li>English <span>Fluent</span></li>
+          <li>French <span>Fluent</span></li>
+          <li>Urdu <span>Fluent</span></li>
+          <li>Hindi <span>Spoken</span></li>
+          <li>Arabic <span>Reading &amp; writing</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Beyond work</h2>
+    <div class="interests">
+      <div class="int"><h3>🏏 Competitive cricket</h3><p>Represents the England Over-40 team and mentors young cricketers.</p></div>
+      <div class="int"><h3>🏃 Hybrid athlete</h3><p>Competes in HYROX, DEKA and OCR events, and plays football.</p></div>
+      <div class="int"><h3>🐠 Aquascaping &amp; fishing</h3><p>Designs aquatic landscapes and enjoys fishing outdoors.</p></div>
+      <div class="int"><h3>✈️ Reading &amp; travel</h3><p>Keen reader and traveller, curious about other countries and cultures.</p></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Let's talk</h2>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" href="mailto:aslam.usman8@gmail.com">aslam.usman8@gmail.com</a>
+      <a class="btn" href="Usman-Aslam-CV.pdf" download>⬇ Download CV</a>
+      <a class="btn" href="https://uk.linkedin.com/in/usman-aslam-2789b26" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>© <span id="y">2026</span> Usman Aslam</p>
+  </footer>
+
+</main>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
