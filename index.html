@@ -94,6 +94,18 @@
   .cert b{display:block;font-size:14px;line-height:1.35}
   .cert small{color:var(--muted);font-size:12.5px}
 
+  /* Applied Skills */
+  .section-note{color:var(--muted);font-size:14px;margin:-8px 0 16px}
+  .applied{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .askill{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+  .askill-head{display:flex;gap:12px;align-items:flex-start}
+  .askill b{display:block;font-size:14px;line-height:1.35}
+  .askill small{color:var(--muted);font-size:12.5px}
+  .askill p{font-size:13px;color:var(--muted)}
+  .askill-foot{margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .askill-foot code{font:12px ui-monospace,SFMono-Regular,Menlo,monospace}
+  .verify{font-weight:600;white-space:nowrap}
+
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .two .card h3{font-size:15px;margin-bottom:4px}
   .muted{color:var(--muted);font-size:14px}
@@ -116,7 +128,7 @@
     .links{display:none}
     .hero{flex-direction:column;text-align:center;padding-top:40px}
     .hero .meta,.btns{justify-content:center}
-    .highlights,.certs,.two,.interests{grid-template-columns:1fr}
+    .highlights,.certs,.applied,.two,.interests{grid-template-columns:1fr}
     .stat b{font-size:22px}
   }
 </style>
@@ -131,6 +143,7 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#certifications">Certifications</a>
+      <a href="#applied-skills">Applied Skills</a>
       <a href="#contact">Contact</a>
       <a href="Usman-Aslam-CV.pdf" download>CV ⬇</a>
     </div>
@@ -155,12 +168,6 @@
       </div>
     </div>
   </header>
-
-  <div class="stats">
-    <div class="stat"><b>12+</b><small>Years in IT infrastructure</small></div>
-    <div class="stat"><b>8</b><small>Industry certifications</small></div>
-    <div class="stat"><b>5</b><small>Languages spoken</small></div>
-  </div>
 
   <section id="about">
     <h2>About</h2>
@@ -267,6 +274,77 @@
       <div class="cert"><div class="badge">MS</div><div><b>MCSA: Office 365</b><small>Microsoft</small></div></div>
       <div class="cert"><div class="badge">MS</div><div><b>Azure Fundamentals (AZ-900)</b><small>Microsoft</small></div></div>
       <div class="cert"><div class="badge">AWS</div><div><b>AWS Certified Cloud Practitioner</b><small>Amazon Web Services</small></div></div>
+    </div>
+  </section>
+
+  <section id="applied-skills">
+    <h2>Microsoft Applied Skills</h2>
+    <p class="section-note">Hands-on, lab-assessed credentials — each one verified by completing real tasks in a live Microsoft environment.</p>
+    <div class="applied">
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">AI</div><div><b>Get started developing agents in Microsoft Foundry</b><small>Microsoft · Jul 2026</small></div></div>
+        <p>Built and deployed AI agents using Microsoft Foundry in a live lab environment.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/6fd4bbbd6eb35078" target="_blank" rel="noopener"><code>6FD4BBBD6EB35078</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/6fd4bbbd6eb35078" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">AZ</div><div><b>Secure Storage for Azure Files and Azure Blob Storage</b><small>Microsoft · Dec 2025</small></div></div>
+        <p>Configured secure storage accounts, controlled access to blobs and file shares, and applied encryption, network restrictions and data-protection settings.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/67946b8997048f0d" target="_blank" rel="noopener"><code>67946B8997048F0D</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/67946b8997048f0d" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">AI</div><div><b>Streamline business workflows with AI chat</b><small>Microsoft · Dec 2025</small></div></div>
+        <p>Used AI chat capabilities to automate and streamline business workflows in a live lab environment.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/8de25db53ebe80fe" target="_blank" rel="noopener"><code>8DE25DB53EBE80FE</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/8de25db53ebe80fe" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">AD</div><div><b>Administer Active Directory Domain Services</b><small>Microsoft · Nov 2025</small></div></div>
+        <p>Administered AD DS in a live lab, including users, groups, organisational units and Group Policy.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/eb9bb71a0e20e2dd" target="_blank" rel="noopener"><code>EB9BB71A0E20E2DD</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/eb9bb71a0e20e2dd" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">SEC</div><div><b>Get started with cloud security and monitoring tasks</b><small>Microsoft · Aug 2025</small></div></div>
+        <p>Performed core cloud security and monitoring tasks in a live Azure lab environment.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/a9e97ea8b4bc8238" target="_blank" rel="noopener"><code>A9E97EA8B4BC8238</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/a9e97ea8b4bc8238" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">ID</div><div><b>Get started with identities and access using Microsoft Entra</b><small>Microsoft · Aug 2025</small></div></div>
+        <p>Managed identities and controlled access using Microsoft Entra in a live lab environment.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/feb661d0e3a24065" target="_blank" rel="noopener"><code>FEB661D0E3A24065</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/feb661d0e3a24065" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
+      <div class="askill">
+        <div class="askill-head"><div class="badge">AZ</div><div><b>Get started with Azure management tasks</b><small>Microsoft · Aug 2025</small></div></div>
+        <p>Carried out core Azure resource management tasks in a live Azure lab environment.</p>
+        <div class="askill-foot">
+          <span>ID: <a href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/948c63db9a44ab5e" target="_blank" rel="noopener"><code>948C63DB9A44AB5E</code></a></span>
+          <a class="verify" href="https://learn.microsoft.com/en-gb/users/uaslam/credentials/948c63db9a44ab5e" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
